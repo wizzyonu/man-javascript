@@ -149,3 +149,61 @@ for(let i = 1; i <= 100; i++) {
     console.log(i);
   }
 }
+
+console.log("--------------------------");
+/**
+ * 4. for...in loop
+ * The 'for...in' loop is used to iterate over the properties of an object.
+ * It is not recommended to use for...in loop for arrays as it may not iterate in the order you expect.
+ * Syntax:
+ * for (variable in object) {
+ *  // code to be executed
+ * }
+ */
+
+let person = {
+  name: "John",
+  age: 30,
+  city: "New York",
+};
+
+for (let key in person) {
+  console.log(key); // prints name, age, city
+  console.log(person[key]); // prints John, 30, New York
+  console.log(`${key}: ${person[key]}`); // prints name: John, age: 30, city: New York
+}
+console.log("--------------------------");
+
+for (let i = 0; i < objects .length; i++) {
+  console.log(fruits[i]); // prints apple, banana, cherry, date, fig, grape
+}
+console.log("--------------------------");
+
+/**
+ * 5. for...of loop
+ * The 'for...of' loop is used to iterate over iterable objects like arrays, strings, maps, sets, etc.
+ * It is not recommended to use for...of loop for objects as it will not work.
+ * Syntax:
+ * for (variable of iterable) {
+ *  // code to be executed
+ * }
+ */
+
+let iterable = ['apple', 'banana', 'cherry', 'date', 'fig', 'grape'];
+
+for (let value of iterable) {
+  console.log(value); // prints apple, banana, cherry, date, fig, grape
+}
+console.log("--------------------------");
+
+//example with object that has array as value as a property
+let obj = {
+  name: "John",
+  age: 30,
+  hobbies: ["reading", "gaming", "coding"],
+};
+
+for (let hobby of obj.hobbies) {
+  console.log(hobby); // prints reading, gaming, coding
+}
+console.log("--------------------------");
