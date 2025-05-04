@@ -83,7 +83,7 @@ console.log(str); //1, 2, 3, 4, 5
 let bumbum = "hello world from javascript";
 let bat = bumbum.split(""); //split string into array of words
 console.log(bat); //["hello", "world", "from", "javascript"]
-bat(0) = "j"; //change first letter to uppercase
+bat [0] = "j"; //change first letter to uppercase
 console.log(bat); //["jello", "world", "from", "javascript"]
 
 const arr00 = [
@@ -97,6 +97,99 @@ const arr00 = [
 ]
 console.log(arr00.length); //apple9
 console.log(arr00[2]); //55
-console.log(arr00[4][2]); 
+console.log(arr00[4][2]); //book
 console.log(arr00[5].name); //john doe
 console.log(arr00[5].age); //54
+
+//solvings
+//Create an array of your favorite fruits and print it.
+let fruits = ["apple", "banana", "orange", "mango", "grape"];
+console.log(fruits); //["apple", "banana", "orange", "mango", "grape"]
+
+//Access the second element in the array
+let papa = [10, 20, 30, 40, 50];
+console.log(papa[1]); //20
+
+
+//Find the length of the array
+papa = [10, 20, 30, 40, 50];
+console.log(papa.lenght); //5
+
+//Add "grape" to the end of the array 
+fruits = ["apple", "banana", ];
+fruits.push("grape"); //add grape to end of array
+console.log(fruits); //["apple", "banana", "grape"]
+
+// Remove the last element from
+papa = [10, 20, 30, 40, 50];
+papa.pop(); //remove last element from array
+console.log(papa); //[10, 20, 30, 40]
+
+//Check if "orange" exists in the array
+fruits = ["apple", "banana", "orange", "mango", "grape"];
+console.log(fruits.includes("orange")); //true
+
+// Combine two arrays
+let arr21 = [1, 2, 3];
+let arr22 = [4, 5, 6];
+let combinedArr = arr21.concat(arr22); //combine two arrays
+console.log(combinedArr); //[1, 2, 3, 4, 5, 6]
+
+// Find the index of "banana" 
+fruits = ["apple", "banana", "orange", "mango", "grape"];
+console.log(fruits.indexOf("banana")); //1
+
+
+//Reverse the array
+let arr23 = [1, 2, 3, 4, 5];
+console.log(arr23.reverse()); //[5, 4, 3, 2, 1]
+
+// Convert the array
+fruits = ["apple", "banana", "orange", "mango", "grape"];
+let str1 = fruits.join(", "); //convert array to string
+console.log(str1); //apple, banana, orange, mango, grape
+
+// Sum all numbers in [1, 2, 3, 4, 5]
+arr23 =  [1, 2, 3, 4, 5];
+
+console.log(arr23.reduce((a, b) => a + b)); //15
+
+//Filter out even numbers from [1, 2, 3, 4, 5]
+arr23 = [1, 2, 3, 4, 5];
+console.log(arr23.filter(num => num % 2 !== 0)); //[1, 3, 5]
+
+//Map each number in [1, 2, 3, 4, 5] to its square
+arr23 = [1, 2, 3, 4, 5];
+console.log(arr23.map(num => num * num)); //[1, 4, 9, 16, 25]
+
+//Check if all numbers in [10, 20, 30] are greater than 5.
+arr23 = [10, 20, 30];
+console.log(arr23.every(num => num > 5)); //true
+
+// Find the first number greater than 10 in [5, 8, 12, 4, 20]
+arr23 = [5, 8, 12, 4, 20];
+console.log(arr23.find(num=> number > 10)); //12
+
+//Remove the first element from ["a", "b", "c"]
+let arr24 = ["a", "b", "c"];
+arr24.shift(); //remove first element from array
+console.log(arr24); //["b", "c"]
+
+//Add "x" to the beginning of ["y", "z"]
+
+let arr25 = ["y", "z"];
+arr25.unshift("x"); //add x to beginning of array
+console.log(arr25); //["x", "y", "z"]
+
+//. Sort [3, 1, 4, 2] in ascending order.
+let arr26 = [3, 1, 4, 2];
+console.log(arr26.sort((a, b) => a - b)); //[1, 2, 3, 4]
+
+//Remove elements from index 1 to 2 in ["a", "b", "c", "d"]
+let arr27 = ["a", "b", "c", "d"];
+console.log(arr27.splice(1, 2)); //["b", "c"]
+
+// Flatten a nested array [[1, 2], [3, 4], [5]] into a single array.
+let arr28 = [[1, 2], [3, 4], [5]];
+console.log(arr28.flat()); //[1, 2, 3, 4, 5]
+
