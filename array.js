@@ -101,6 +101,68 @@ console.log(arr00[4][2]); //book
 console.log(arr00[5].name); //john doe
 console.log(arr00[5].age); //54
 
+//advancded array methods
+//-map() creates a new array populated with the results of calling a provided function on every element in the calling array.
+let numbers = [1, 2, 3, 4, 5]; //array with 5 values
+
+//using for loop to raise to power 2
+let numto = [] //empty array
+for (let i = 0; i < numbers.length; i++){
+    numto.push(Math.pow(numbers[i], 2)); //raise to power 2
+}
+console.log(numto); //[1, 4, 9, 16, 25]
+
+//using map() to raise to power 2
+const raiseto2 = num =>{
+    return Math.pow(num, 2); //raise to power 2
+}
+let numto2 = numbers.map(raiseto2); //using map() to raise to power 2
+console.log(numto2); //[1, 4, 9, 16, 25]
+
+const numto3 = numbers.map(num => Math.pow(num, 2)); //using map() to raise to power 2
+console.log(numto3); //[1, 4, 9, 16, 25]
+
+
+//-filter() creates a new array with all elements that pass the test implemented by the provided function.
+let filtered = numbers.filter(num => num % 2 === 0); //create a new array with all elements that pass the test implemented by the provided function.
+console.log(filtered); //[2, 4]
+
+//Arrays of 10 objects
+ arr22 = [
+    {name : "john doe", age : 54, status : "active"},
+    {name : "jane doe", age : 34, status : "inactive"},
+    {name : "jane doe", age : 34, status : "inactive"},
+    {name : "jane doe", age : 34, status : "inactive"},
+    {name : "james doe", age : 24, status : "active"},
+    {name : "jane doe", age : 34, status : "inactive"},
+    {name : "jake doe", age : 44, status : "active"},
+    {name : "jill doe", age : 14, status : "inactive"},
+    {name : "josh doe", age : 64, status : "active"},
+    {name : "jerry doe", age : 74, status : "inactive"},
+    
+]
+const gt50 = arr21.filter(obj => obj.age > 50); //create a new array with all elements that pass the test implemented by the provided function.
+console.log(gt50); //[{name : "john doe", age : 54, status : "active"},{name : "jerry doe", age : 74, status : "inactive"}]
+
+const active = arr21.filter(obj => obj.status === "active"); //create a new array with all elements that pass the test implemented by the provided function.
+
+//-reduce() executes a reducer function (that you provide) on each element of the array, resulting in a single output value.
+const sum = numbers.reduce((accumulator, currentValue) => {
+    return accumulator + currentValue; //return sum of all elements in array
+}, 0); //initial value of accumulator is 0
+console.log(sum); //15
+
+//forEach() executes a provided function once for each array element.
+numbers.forEach((element,index) => {
+    console.log(`Element at index ${index} is ${element}`); //print element at index
+});
+
+
+
+
+
+
+
 //solvings
 //Create an array of your favorite fruits and print it.
 let fruits = ["apple", "banana", "orange", "mango", "grape"];
