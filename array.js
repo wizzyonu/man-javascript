@@ -128,23 +128,23 @@ let filtered = numbers.filter(num => num % 2 === 0); //create a new array with a
 console.log(filtered); //[2, 4]
 
 //Arrays of 10 objects
- arr22 = [
-    {name : "john doe", age : 54, status : "active"},
-    {name : "jane doe", age : 34, status : "inactive"},
-    {name : "jane doe", age : 34, status : "inactive"},
-    {name : "jane doe", age : 34, status : "inactive"},
-    {name : "james doe", age : 24, status : "active"},
-    {name : "jane doe", age : 34, status : "inactive"},
-    {name : "jake doe", age : 44, status : "active"},
-    {name : "jill doe", age : 14, status : "inactive"},
-    {name : "josh doe", age : 64, status : "active"},
-    {name : "jerry doe", age : 74, status : "inactive"},
+//  arr22 = [
+//     {name : "john doe", age : 54, status : "active"},
+//     {name : "jane doe", age : 34, status : "inactive"},
+//     {name : "jane doe", age : 34, status : "inactive"},
+//     {name : "jane doe", age : 34, status : "inactive"},
+//     {name : "james doe", age : 24, status : "active"},
+//     {name : "jane doe", age : 34, status : "inactive"},
+//     {name : "jake doe", age : 44, status : "active"},
+//     {name : "jill doe", age : 14, status : "inactive"},
+//     {name : "josh doe", age : 64, status : "active"},
+//     {name : "jerry doe", age : 74, status : "inactive"},
     
-]
-const gt50 = arr21.filter(obj => obj.age > 50); //create a new array with all elements that pass the test implemented by the provided function.
-console.log(gt50); //[{name : "john doe", age : 54, status : "active"},{name : "jerry doe", age : 74, status : "inactive"}]
+// ]
+// const gt50 = arr21.filter(obj => obj.age > 50); //create a new array with all elements that pass the test implemented by the provided function.
+// console.log(gt50); //[{name : "john doe", age : 54, status : "active"},{name : "jerry doe", age : 74, status : "inactive"}]
 
-const active = arr21.filter(obj => obj.status === "active"); //create a new array with all elements that pass the test implemented by the provided function.
+// const active = arr21.filter(obj => obj.status === "active"); //create a new array with all elements that pass the test implemented by the provided function.
 
 //-reduce() executes a reducer function (that you provide) on each element of the array, resulting in a single output value.
 const sum = numbers.reduce((accumulator, currentValue) => {
@@ -230,7 +230,7 @@ console.log(arr23.every(num => num > 5)); //true
 
 // Find the first number greater than 10 in [5, 8, 12, 4, 20]
 arr23 = [5, 8, 12, 4, 20];
-console.log(arr23.find(num=> number > 10)); //12
+console.log(arr23.find(number=> number > 10)); //12
 
 //Remove the first element from ["a", "b", "c"]
 let arr24 = ["a", "b", "c"];
@@ -255,3 +255,6 @@ console.log(arr27.splice(1, 2)); //["b", "c"]
 let arr28 = [[1, 2], [3, 4], [5]];
 console.log(arr28.flat()); //[1, 2, 3, 4, 5]
 
+let colors = ["red", "green", "blue"];
+let randomColor = Math.random() * colors.length;
+console.log(colors[Math.floor(randomColor)]); //random color from array
